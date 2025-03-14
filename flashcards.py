@@ -1,5 +1,5 @@
 from openai import OpenAI
-from whisperx import transcribe_audio
+from transcribe import transcribe_audio
 import json
 import re
 
@@ -39,7 +39,7 @@ def create_flashcards(transcript):
         print("No valid JSON data found!")
 
 if __name__ == "__main__":
-    transcript = transcribe_audio("")
+    transcript = transcribe_audio("") # Insert audio here
     extracted_data = create_flashcards(transcript)
 
     for entry in extracted_data:
